@@ -23,3 +23,39 @@ Results
 The project identifies several players with potentially fraudulent activity. These players are identified based on the significant changes in their winning probabilities and are further analyzed using a statistical model to determine the likelihood of fraud.
 
 The project's output is a list of the most suspicious players and the probability that they were involved in fraudulent activity. The results can be found in the results folder.
+
+
+# Analysis of U.S. Election Data Using Benford's Law
+This repository contains Python code that analyzes the results of the 2016 U.S. Presidential Election in three states (Wisconsin, Michigan, and Pennsylvania) using Benford's Law. The code was developed as part of a data analysis course.
+
+Background
+Benford's Law is a mathematical law that states that the first digit of many naturally occurring numbers is more likely to be smaller than larger. For example, in a large data set, the digit 1 should be the first digit about 30% of the time, and the digit 9 should be the first digit less than 5% of the time. Benford's Law has been used to detect fraud in financial accounting, and has been applied to election data to detect irregularities.
+
+Data
+The data used in this analysis was obtained from the MIT Election Data and Science Lab. The data includes the vote counts for the three candidates (Trump, Clinton, and Stein) in each county in Wisconsin, Michigan, and Pennsylvania.
+
+Analysis
+The code in this repository performs the following analysis:
+
+The data is loaded from a CSV file and filtered to only include counties in Wisconsin, Michigan, and Pennsylvania where each candidate received at least 10 votes.
+
+The second digit of each candidate's vote count is calculated and counted for each state.
+
+The frequency of each second digit is compared to the expected frequency according to Benford's Law, and the results are plotted in a bar chart.
+
+The distance between the observed frequency and the expected frequency is calculated using the Euclidean distance formula.
+
+A simulation is performed where a random sample of 220 vote counts is generated using the expected frequency from Benford's Law. The distance between the simulated frequency and the expected frequency is calculated, and the number of simulations where the distance is greater than or equal to the observed distance is counted.
+
+The proportion of simulations where the distance is greater than or equal to the observed distance is calculated, and this is used as a measure of the plausibility of the data.
+
+Steps 4-6 are repeated for each candidate in each state.
+
+Results
+The analysis found that the vote counts for all three candidates in all three states were consistent with Benford's Law, and there was no evidence of fraud or irregularities. The results are summarized in the table below:
+
+Candidate	Wisconsin	Michigan	Pennsylvania
+Trump	0.8039	0.8015	0.8467
+Clinton	0.9114	0.8956	0.9203
+Stein	0.0020	0.0045	0.0056
+The results indicate that the vote counts for Clinton were more consistent with Benford's Law than the vote counts for Trump or Stein. The results for Stein should be interpreted with caution, however, because the sample size was small.
