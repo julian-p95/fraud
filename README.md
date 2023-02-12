@@ -49,13 +49,3 @@ A simulation is performed where a random sample of 220 vote counts is generated 
 
 The proportion of simulations where the distance is greater than or equal to the observed distance is calculated, and this is used as a measure of the plausibility of the data.
 
-Steps 4-6 are repeated for each candidate in each state.
-
-Results
-The analysis found that the vote counts for all three candidates in all three states were consistent with Benford's Law, and there was no evidence of fraud or irregularities. The results are summarized in the table below:
-
-Candidate	Wisconsin	Michigan	Pennsylvania
-Trump	0.8039	0.8015	0.8467
-Clinton	0.9114	0.8956	0.9203
-Stein	0.0020	0.0045	0.0056
-The results indicate that the vote counts for Clinton were more consistent with Benford's Law than the vote counts for Trump or Stein. The results for Stein should be interpreted with caution, however, because the sample size was small.
